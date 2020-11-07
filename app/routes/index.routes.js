@@ -20,11 +20,11 @@ module.exports = app => {
 
   app.delete("/candidate", candidate.deleteAll);
 
-  app.post("/comment", comment.create);
+  app.put("/comment", comment.create);
 
   app.get("/comment/:candidateId", comment.findAllByCondId);
 
-  app.post("/score", score.create);
+  app.put("/score", score.create);
 
   app.get("/score/:candidateId", score.findAveScore);
 
