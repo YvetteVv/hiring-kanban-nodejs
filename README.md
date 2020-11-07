@@ -12,5 +12,9 @@ npm install
 
 ### Run
 ```
-node server.js
+yarn start
+
 ```
+### MySQL Database server
+
+47.252.83.229
