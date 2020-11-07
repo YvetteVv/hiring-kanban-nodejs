@@ -58,44 +58,47 @@ Candidate.getAll = result => {
 
 Candidate.updateById = (id, candidate, result) => {
   sql.query(
-    "UPDATE candidate SET name = ?, education = ?, email = ?, attach = ?, status = ? WHERE id = ?",
-    [candidate.name, candidate.education, candidate.email, candidate.attach, candidate.status, id],
-    (err, res) => {
-      if (err) {
-        console.log("error: ", err);
-        result(null, err);
-        return;
-      }
+      "UPDATE candidate SET name = ?, education = ?, email = ?, attach = ?, status = ? WHERE id = ?",
+      [candidate.name, candidate.education, candidate.email, candidate.attach, candidate.status, id],
+      (err, res) => {
+        if (err) {
+          console.log("error: ", err);
+          result(null, err);
+          return;
+        }
 
-      if (res.affectedRows == 0) {
-        // not found candidate with the id
-        result({ kind: "not_found" }, null);
-        return;
-      }
+        if (res.affectedRows == 0) {
+          // not found candidate with the id
+          result({ kind: "not_found" }, null);
+          return;
+        }
 
-      console.log("updated candidate: ", { id: id, ...candidate });
-      result(null, { id: id, ...candidate });
-    }
+        console.log("updated candidate: ", { id: id, ...candidate });
+        result(null, { id: id, ...candidate });
+      }
   );
 };
 
 Candidate.remove = (id, result) => {
-  sql.query("DELETE FROM candidate WHERE id = ?", id, (err, res) => {
-    if (err) {
-      console.log("error: ", err);
-      result(null, err);
-      return;
-    }
+  sql.query(
+      `DELETE FROM candidate WHERE id = ${id}; 
+       UPDATE comment SET is_delete = ${1} WHERE cand_id = ${id}; 
+       UPDATE score SET is_delete = ${1} WHERE cand_id = ${id}`, (err, res) => {
+        if (err) {
+          console.log("error: ", err);
+          result(null, err);
+          return;
+        }
 
-    if (res.affectedRows == 0) {
-      // not found candidate with the id
-      result({ kind: "not_found" }, null);
-      return;
-    }
+        if (res.affectedRows == 0) {
+          // not found candidate with the id
+          result({ kind: "not_found" }, null);
+          return;
+        }
 
-    console.log("deleted candidate with id: ", id);
-    result(null, res);
-  });
+        console.log("deleted candidate with id: ", id);
+        result(null, res);
+      });
 };
 
 Candidate.removeAll = result => {

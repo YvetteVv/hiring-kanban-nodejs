@@ -20,7 +20,7 @@ Score.create = (newScore, result) => {
 };
 
 Score.findAveScore = (candidateId, result) => {
-  sql.query(`SELECT AVG(score) AS CountAverage FROM score WHERE cand_id = ${candidateId}`, (err, res) => {
+  sql.query(`SELECT AVG(score) AS CountAverage FROM score WHERE cand_id = ${candidateId} AND is_delete = ${0}`, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
