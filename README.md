@@ -3,7 +3,7 @@
 
 ## Project setup
 ```
-npm install
+yarn install
 ```
 
 ### Run
