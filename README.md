@@ -1,9 +1,5 @@
-# Node.js Rest APIs with Express & MySQL example
+# Hiring Kanban Node.js Rest APIs with Express & MySQL
 
-For more detail, please visit:
-> [Build Node.js Rest APIs with Express & MySQL](https://bezkoder.com/node-js-rest-api-express-mysql/)
-
-> [Deploying/Hosting Node.js app on Heroku with MySQL database](https://bezkoder.com/deploy-node-js-app-heroku-cleardb-mysql/)
 
 ## Project setup
 ```
@@ -15,6 +11,3 @@ npm install
 yarn start
 
 ```
-### MySQL Database server
-
-47.252.83.229
