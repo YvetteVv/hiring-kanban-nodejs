@@ -123,6 +123,7 @@ Candidate.remove = (id, result) => {
       });
 };
 
+
 Candidate.removeAll = result => {
   sql.query("DELETE FROM candidate", (err, res) => {
     if (err) {
