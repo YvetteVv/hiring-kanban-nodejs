@@ -11,3 +11,6 @@ yarn install
 yarn start
 
 ```
+### Server is running
+
+http://localhost:5000/
