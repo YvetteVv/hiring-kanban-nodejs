@@ -14,7 +14,7 @@ exports.create = (req, res) => {
 
     name: req.body.name,
     education: req.body.education,
-    email: req.body.email,
+    contact: req.body.contact,
     attach: req.body.attach,
     status: req.body.status,
 
@@ -69,7 +69,7 @@ exports.update = (req, res) => {
     });
   }
 
-  console.log(req.body);
+  //console.log(req.body);
 
   Candidate.updateById(
     req.params.candidateId,
@@ -89,6 +89,25 @@ exports.update = (req, res) => {
     }
   );
 };
+// exports.updateUrlById = (req, res) =>{
+//   Candidate.updateUrlById(
+//       req.params.candidateId,
+//       new Candidate(req.body),
+//       (err, data) => {
+//         if (err) {
+//           if (err.kind === "not_found") {
+//             res.status(404).send({
+//               message: `Not found Candidate with id ${req.params.candidateId}.`
+//             });
+//           } else {
+//             res.status(500).send({
+//               message: "Error updating Candidate with id " + req.params.customerId
+//             });
+//           }
+//         } else res.send(data);
+//       }
+//   );
+// }
 
 // Delete a Candidate with the specified customerId in the request
 exports.delete = (req, res) => {

@@ -2,7 +2,7 @@ const sql = require("./db.js");
 
 // constructor
 const Candidate = function(candidate) {
-  this.email = candidate.email;
+  this.contact = candidate.contact;
   this.name = candidate.name;
   this.education = candidate.education;
   this.attach = candidate.attach;
@@ -58,8 +58,8 @@ Candidate.getAll = result => {
 
 Candidate.updateById = (id, candidate, result) => {
   sql.query(
-      "UPDATE candidate SET name = ?, education = ?, email = ?, attach = ?, status = ? WHERE id = ?",
-      [candidate.name, candidate.education, candidate.email, candidate.attach, candidate.status, id],
+      "UPDATE candidate SET name = ?, education = ?, contact = ?, attach = ?, status = ? WHERE id = ?",
+      [candidate.name, candidate.education, candidate.contact, candidate.attach, candidate.status, id],
       (err, res) => {
         if (err) {
           console.log("error: ", err);
@@ -78,6 +78,28 @@ Candidate.updateById = (id, candidate, result) => {
       }
   );
 };
+
+// Candidate.updateUrlById = (id, url, result) => {
+//   sql.query(
+//       `UPDATE attach = ${url} WHERE id = ${id}`,
+//       (err, res) => {
+//         if (err) {
+//           console.log("error: ", err);
+//           result(null, err);
+//           return;
+//         }
+//
+//         if (res.affectedRows == 0) {
+//           // not found candidate with the id
+//           result({ kind: "not_found" }, null);
+//           return;
+//         }
+//
+//         console.log("updated candidate: ", { id: id, ...candidate });
+//         result(null, { id: id, ...candidate });
+//       }
+//   );
+// };
 
 Candidate.remove = (id, result) => {
   sql.query(

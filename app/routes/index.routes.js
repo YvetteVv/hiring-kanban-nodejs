@@ -1,3 +1,4 @@
+const sql = require("../models/db.js");
 module.exports = app => {
 
   const multer  = require('multer');
@@ -49,22 +50,20 @@ module.exports = app => {
   //app.delete("/candidate", candidate.deleteAll);
 
   // Create a comment
-  app.put("/comment", comment.create);
+  app.put("/candidate/:candidateId/comment", comment.create);
 
   // Get all the comments by candidateId
-  app.get("/comment/:candidateId", comment.findAllByCondId);
+  app.get("/candidate/:candidateId/comment", comment.findAllByCondId);
 
-  app.put("/score", score.create);
+  app.put("/candidate/:candidateId/score", score.create);
 
-  app.get("/score/:candidateId", score.findAveScore);
+  app.get("/candidate/:candidateId/average-score", score.findAveScore);
 
   //POST method route for uploading file
-  app.post('/post_file', upload.single('demo_file'), function (req, res) {
+  app.post('/post_file/:candidateId', upload.single('demo_file'), function (req, res) {
     //Multer middleware adds file(in case of single file ) or files(multiple files) object to the request object.
     //req.file is the demo_file
-    console.log(req.file.path);
-    console.log(req.file.filename);
-    uploadFile(req.file.path, req.file.filename ,res);
+    uploadFile(req.file.path, req.file.filename ,req.params.candidateId, res);
   })
 
 //GET method route for downloading/retrieving file
@@ -77,29 +76,44 @@ module.exports = app => {
   });
 
 //The uploadFile function
-  function uploadFile(source,targetName,res){
-    console.log('preparing to upload...');
-    fs.readFile(source, function (err, filedata) {
+  function uploadFile(source, fileName, id, res){
+    return new Promise((resolve, reject) => {
+      fs.readFile(source, function (err, fileData) {
+        if (err) {
+          reject(err);
+          return;
+        }
+        const md5FileName = fileName; // TODO
+        const putParams = {
+          Bucket      : 'yuweitest',
+          Key         : md5FileName,
+          Body        : fileData
+        };
+        const x = s3.putObject(putParams).promise();
+        x.then(function(data) {
+          console.log("Successfully uploaded data to " + putParams.Bucket + "/" + putParams.Key);
+          resolve(`https://yuweitest.s3.amazonaws.com/${md5FileName}`);
+        });
+      })
+    }).then((url) => {
+        // TODO
 
-          if (!err) {
-            const putParams = {
-              Bucket      : 'yuweitest',
-              Key         : targetName,
-              Body        : filedata
-            };
-            let putObjectPromise = s3.putObject(putParams).promise();
-            putObjectPromise.then(function(data) {
-              console.log("Successfully uploaded data to " + putParams.Bucket + "/" + putParams.Key);
-              return res.send({success:true})
-            }).catch(err);
-
-          }
-          else{
-            console.log({'err':err});
-          }
-        },
-
-    );
+        sql.query(
+            `UPDATE candidate SET attach = ${url} WHERE id = ${id}`,
+            (err, data) => {
+                if (err) {
+                    console.log("error: ", err);
+                }
+                else{
+                    console.log("updated candidate: ", { id: id});
+                    console.log(data);
+                    res.send(data)
+                }
+            }
+        );
+        //res.send({url})
+        return Promise.resolve();
+    });
   }
 
 //The retrieveFile function
