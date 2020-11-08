@@ -4,11 +4,7 @@
     <list default="true" id="47797a10-feb8-454b-99ea-c5831c76035c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/candidate.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/candidate.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/comment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/comment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/score.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/score.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/upload.controller.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/candidate.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/candidate.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/upload.model.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/index.routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/index.routes.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/index.routes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="436">
-              <caret line="111" column="13" lean-forward="true" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+            <state relative-caret-position="335">
+              <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -50,15 +46,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/keys.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -66,17 +53,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/candidate.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-77">
-              <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+            <state relative-caret-position="289">
+              <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/candidate.model.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="72" column="17" lean-forward="true" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
+            <state relative-caret-position="429">
+              <caret line="79" column="2" lean-forward="true" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -123,9 +110,10 @@
         <option value="$PROJECT_DIR$/app/models/upload.model.js" />
         <option value="$PROJECT_DIR$/app/controllers/score.controller.js" />
         <option value="$PROJECT_DIR$/app/controllers/comment.controller.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/controllers/candidate.controller.js" />
-        <option value="$PROJECT_DIR$/app/models/candidate.model.js" />
         <option value="$PROJECT_DIR$/app/routes/index.routes.js" />
+        <option value="$PROJECT_DIR$/app/models/candidate.model.js" />
       </list>
     </option>
   </component>
@@ -259,12 +247,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604711480910</updated>
-      <workItem from="1604711482201" duration="30612000" />
+      <workItem from="1604711482201" duration="33811000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30612000" />
+    <option name="totallyTimeSpent" value="33811000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -315,9 +303,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/yarn.lock">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -386,6 +371,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/routes/keys.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -403,24 +395,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/index.routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/candidate.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="86" column="9" lean-forward="true" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
+        <state relative-caret-position="289">
+          <caret line="77" column="16" lean-forward="true" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/candidate.model.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="72" column="17" lean-forward="true" selection-start-line="72" selection-start-column="17" selection-end-line="72" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/index.routes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="111" column="13" lean-forward="true" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+        <state relative-caret-position="429">
+          <caret line="79" column="2" lean-forward="true" selection-start-line="79" selection-start-column="2" selection-end-line="79" selection-end-column="2" />
         </state>
       </provider>
     </entry>

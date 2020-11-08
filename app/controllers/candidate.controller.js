@@ -127,13 +127,13 @@ exports.delete = (req, res) => {
 };
 
 // Delete all Candidates from the database.
-exports.deleteAll = (req, res) => {
-  Candidate.removeAll((err, data) => {
-    if (err)
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while removing all candidates."
-      });
-    else res.send({ message: `All candidates were deleted successfully!` });
-  });
-};
+// exports.deleteAll = (req, res) => {
+//   Candidate.removeAll((err, data) => {
+//     if (err)
+//       res.status(500).send({
+//         message:
+//           err.message || "Some error occurred while removing all candidates."
+//       });
+//     else res.send({ message: `All candidates were deleted successfully!` });
+//   });
+// };

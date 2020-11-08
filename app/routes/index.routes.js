@@ -1,4 +1,5 @@
 const sql = require("../models/db.js");
+const Candidate = require("../models/candidate.model.js");
 module.exports = app => {
 
   const multer  = require('multer');
@@ -97,21 +98,18 @@ module.exports = app => {
       })
     }).then((url) => {
         // TODO
-
         sql.query(
-            `UPDATE candidate SET attach = ${url} WHERE id = ${id}`,
+            `UPDATE candidate SET attach = '${url}' WHERE id = ${id}`,
             (err, data) => {
                 if (err) {
                     console.log("error: ", err);
                 }
                 else{
                     console.log("updated candidate: ", { id: id});
-                    console.log(data);
-                    res.send(data)
                 }
             }
         );
-        //res.send({url})
+        res.send({url});
         return Promise.resolve();
     });
   }
