@@ -32,7 +32,7 @@ Score.findAveScore = (candidateId, result) => {
 
     if (res.length) {
       console.log("found score: ", res);
-      result(-1, res[0]);
+      result(err, res[0]);
       return;
     }
 
