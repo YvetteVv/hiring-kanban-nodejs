@@ -7,7 +7,7 @@ const Comment = function(comment) {
 };
 
 Comment.create = (newComment, result) => {
-  sql.query("INSERT INTO comment SET ?", newComment, (err, res) => {
+  sql.query("INSERT INTO comment SET ? ", newComment, (err, res) => {
     if (err) {
       console.log("error: ", err);
       result(err, null);
