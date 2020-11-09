@@ -38,7 +38,7 @@ exports.findAveScore = (req, res) => {
           // message: `Not found Ave Score with id ${req.params.candidateId}.`
         );
       } else {
-        res.status(500).send({
+        res.status(200).send({
               CountAverage: -1
             }
           // message: "Error retrieving avg score with id " + req.params.candidateId

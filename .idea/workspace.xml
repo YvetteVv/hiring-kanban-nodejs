@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="47797a10-feb8-454b-99ea-c5831c76035c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/comment.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/comment.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/score.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/score.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/comment.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/comment.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/score.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/score.model.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/score.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="205">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -40,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/comment.controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+            <state relative-caret-position="266">
+              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -55,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes/index.routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="353">
@@ -106,10 +102,10 @@
         <option value="$PROJECT_DIR$/app/routes/index.routes.js" />
         <option value="$PROJECT_DIR$/app/models/db.js" />
         <option value="$PROJECT_DIR$/app/models/candidate.model.js" />
-        <option value="$PROJECT_DIR$/app/controllers/comment.controller.js" />
-        <option value="$PROJECT_DIR$/app/controllers/score.controller.js" />
         <option value="$PROJECT_DIR$/app/models/score.model.js" />
         <option value="$PROJECT_DIR$/app/models/comment.model.js" />
+        <option value="$PROJECT_DIR$/app/controllers/comment.controller.js" />
+        <option value="$PROJECT_DIR$/app/controllers/score.controller.js" />
       </list>
     </option>
   </component>
@@ -243,12 +239,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1604711480910</updated>
-      <workItem from="1604711482201" duration="38581000" />
+      <workItem from="1604711482201" duration="38961000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38581000" />
+    <option name="totallyTimeSpent" value="38961000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -376,13 +372,6 @@
     <entry file="file://$PROJECT_DIR$/app/routes/keys.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/score.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/score.model.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -390,10 +379,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comment.controller.js">
+    <entry file="file://$PROJECT_DIR$/app/routes/index.routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        <state relative-caret-position="353">
+          <caret line="60" column="48" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -404,10 +393,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/index.routes.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/comment.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="60" column="48" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="48" />
+        <state relative-caret-position="266">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/score.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
         </state>
       </provider>
     </entry>
