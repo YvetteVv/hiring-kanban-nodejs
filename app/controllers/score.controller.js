@@ -11,7 +11,7 @@ exports.create = (req, res) => {
 
   // Create a Score
   const score = new Score({
-    cand_id: req.param.candidateId,
+    cand_id: req.params.candidateId,
     score: req.body.score,
   });
 
