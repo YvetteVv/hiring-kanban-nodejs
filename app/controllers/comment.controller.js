@@ -32,7 +32,7 @@ exports.findAllByCondId = (req, res) => {
   Comment.findAllByCondId(req.params.candidateId, (err, data) => {
     if (err) {
       if (err.kind === "not_found") {
-        res.status(404).send('[]'
+        res.status(200).send('[]'
           //message: `Not found Comment with id ${req.params.candidateId}.`
         );
       } else {

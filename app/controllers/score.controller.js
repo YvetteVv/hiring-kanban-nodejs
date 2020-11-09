@@ -32,7 +32,7 @@ exports.findAveScore = (req, res) => {
   Score.findAveScore(req.params.candidateId, (err, data) => {
     if (err) {
       if (err.kind === "not_found") {
-        res.status(404).send({
+        res.status(200).send({
               CountAverage: -1
             }
           // message: `Not found Ave Score with id ${req.params.candidateId}.`
