@@ -51,12 +51,12 @@ module.exports = app => {
   //app.delete("/candidate", candidate.deleteAll);
 
   // Create a comment
-  app.put("/candidate/:candidateId/comment", comment.create);
+  app.post("/candidate/:candidateId/comment", comment.create);
 
   // Get all the comments by candidateId
   app.get("/candidate/:candidateId/comment", comment.findAllByCondId);
 
-  app.put("/candidate/:candidateId/score", score.create);
+  app.post("/candidate/:candidateId/score", score.create);
 
   app.get("/candidate/:candidateId/average-score", score.findAveScore);
 
