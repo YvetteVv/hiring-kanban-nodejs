@@ -32,13 +32,13 @@ exports.findAllByCondId = (req, res) => {
   Comment.findAllByCondId(req.params.candidateId, (err, data) => {
     if (err) {
       if (err.kind === "not_found") {
-        res.status(404).send({
-          message: `Not found Comment with id ${req.params.candidateId}.`
-        });
+        res.status(404).send('[]'
+          //message: `Not found Comment with id ${req.params.candidateId}.`
+        );
       } else {
-        res.status(500).send({
-          message: "Error retrieving comment with id " + req.params.candidateId
-        });
+        res.status(500).send('[]'
+          //message: "Error retrieving comment with id " + req.params.candidateId
+        );
       }
     } else res.send(data);
   });

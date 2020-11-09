@@ -34,7 +34,7 @@ Comment.findAllByCondId = (candidateId, result) => {
     }
 
     // not found comment with the id
-    result({ kind: "not_found" }, null);
+    result({ kind: "not_found" }, '[]');
   });
 };
 

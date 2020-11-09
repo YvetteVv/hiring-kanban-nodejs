@@ -20,6 +20,9 @@ Score.create = (newScore, result) => {
 };
 
 Score.findAveScore = (candidateId, result) => {
+  let json = {
+    CountAverage: -1
+  }
   sql.query(`SELECT AVG(score) AS CountAverage FROM score WHERE cand_id = ${candidateId} AND is_delete = ${0}`, (err, res) => {
     if (err) {
       console.log("error: ", err);
@@ -29,12 +32,12 @@ Score.findAveScore = (candidateId, result) => {
 
     if (res.length) {
       console.log("found score: ", res);
-      result(null, res[0]);
+      result(-1, res[0]);
       return;
     }
 
     // not found score with the id
-    result({ kind: "not_found" }, null);
+    result({ kind: "not_found" }, json);
   });
 };
 

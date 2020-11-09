@@ -33,12 +33,16 @@ exports.findAveScore = (req, res) => {
     if (err) {
       if (err.kind === "not_found") {
         res.status(404).send({
-          message: `Not found Ave Score with id ${req.params.candidateId}.`
-        });
+              CountAverage: -1
+            }
+          // message: `Not found Ave Score with id ${req.params.candidateId}.`
+        );
       } else {
         res.status(500).send({
-          message: "Error retrieving avg score with id " + req.params.candidateId
-        });
+              CountAverage: -1
+            }
+          // message: "Error retrieving avg score with id " + req.params.candidateId
+        )
       }
     } else res.send(data);
   });
